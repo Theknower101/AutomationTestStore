@@ -5,26 +5,22 @@ import org.testng.annotations.Test;
 public class MyTestCases extends TestData {
 
 MainPage main=new MainPage();
-LoginPage login=new LoginPage();
+SignUp sign=new SignUp();
 @BeforeTest
 public void mySetUp() {
 	configuration ();
 }
 @Test(priority=1)
-public void navigateToLoginPage() throws InterruptedException {
-	main.navigateToLoginPageTest();
+public void navigateToSignPage() throws InterruptedException {
+	main.navigateToSignUpPageTest();
 }
 @Test(priority=2)
-public void checkTheLoginWindow() throws InterruptedException {
-	main.checkTheLoginWindowTest();
+public void checkTheSignUpWindow() throws InterruptedException {
+	main.checkTheSignUpWindowTest();
 }
 @Test(priority=3)
-public void logIn() throws InterruptedException {
-	login.logInTest();
-}
-@Test(priority=4)
-public void checkAddressText() throws InterruptedException {
-login.checkAddressTextTest();
+public void SignUp() throws InterruptedException {
+	sign.signUpTest();
 }
 
 }

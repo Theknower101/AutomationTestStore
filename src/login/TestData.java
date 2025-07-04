@@ -1,7 +1,5 @@
 package login;
-
 import java.util.Random;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterSuite;
@@ -12,12 +10,21 @@ public class TestData {
 	Random rand1=new Random();
     Random rand2=new Random ();
     Random rand3=new Random ();
+    Random rand4=new Random ();
+    Random rand5=new Random();
 	String url="https://automationteststore.com/index.php?rt=account/create";
 	String urlLoginPage="https://automationteststore.com/index.php?rt=account/login";
-	String loginWindowName="I am a new customer.";
+	String signUpWindowName="I am a new customer.";
 	String firstName[]= {"Ahmad","Mohammad","Talal","Tala","Sara"};
 	String lastName[]= {"Allan","Ehsan","AlHussein","Alzboun"};
 	String telephone[]= {"0791234567","0791312233","0788556677","0776544561"};
+	String password[]= {"Ahmad12345","Mohammad12345","Omar12345","Ali12345"};
+	String fax[]= {"5678","1234","2456","0987"};
+	String company="Microsoft";
+	String address1="Amman";
+	String address2="Irbid";
+	String city="Arajan";
+	String zipCode="0001";
 	@BeforeSuite
 	public void setUp() {
 		if(driver==null) {
