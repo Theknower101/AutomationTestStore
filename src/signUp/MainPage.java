@@ -1,4 +1,4 @@
-package login;
+package signUp;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

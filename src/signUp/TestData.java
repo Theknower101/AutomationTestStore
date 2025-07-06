@@ -1,4 +1,4 @@
-package login;
+package signUp;
 import java.util.Random;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -8,10 +8,6 @@ public class TestData {
 	protected static WebDriver driver;
 	boolean isExist=true;
 	Random rand1=new Random();
-    Random rand2=new Random ();
-    Random rand3=new Random ();
-    Random rand4=new Random ();
-    Random rand5=new Random();
 	String url="https://automationteststore.com/index.php?rt=account/create";
 	String urlLoginPage="https://automationteststore.com/index.php?rt=account/login";
 	String signUpWindowName="I am a new customer.";

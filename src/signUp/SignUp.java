@@ -1,4 +1,4 @@
-package login;
+package signUp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -30,13 +30,16 @@ public class SignUp extends TestData {
      WebElement continueButton=driver.findElement(By.xpath("//button[normalize-space()='Continue']"));
        //data
 	    int firstNameIndex=rand1.nextInt(firstName.length);
-	    int lastNameIndex=rand2.nextInt(lastName.length);
-	    int telephoneIndex=rand3.nextInt(telephone.length);
-	    int faxIndex=rand4.nextInt(fax.length);
-	    int passwordIndex=rand5.nextInt(password.length);
+	    int lastNameIndex=rand1.nextInt(lastName.length);
+	    int emailIndex=rand1.nextInt(9800);
+	    int telephoneIndex=rand1.nextInt(telephone.length);
+	    int faxIndex=rand1.nextInt(fax.length);
+	    int passwordIndex=rand1.nextInt(password.length);
+	    int countriesIndex=rand1.nextInt(1,240);
 	    String passwordValue=password[passwordIndex];
 	    String confirmedPassword=password[passwordIndex];
-	    String email =firstName[firstNameIndex] +lastName[lastNameIndex]+"@gmail.com";
+	    String email =firstName[firstNameIndex] +lastName[lastNameIndex]+emailIndex+"@gmail.com";
+	    String loginName=firstName[firstNameIndex] +lastName[lastNameIndex];
 	    Select stateSelect=new Select(selectElementState);
 	    Select countrySelect=new Select(selectElementCountry);
 	    //Action
@@ -60,17 +63,19 @@ public class SignUp extends TestData {
 	    Thread.sleep(2000);
 	    cityInput.sendKeys(city);
 	    Thread.sleep(2000);
-	    selectElementState.click();
-	    stateSelect.selectByVisibleText("Angus");
-	    Thread.sleep(2000);
 	    zipCodeInput.sendKeys(zipCode);
 	    Thread.sleep(2000);
 	    selectElementCountry.click();
-	    countrySelect.selectByVisibleText("Croatia");
+	    countrySelect.selectByIndex(countriesIndex);
+	    Thread.sleep(2000);
+	    int statesIndex=selectElementState.findElements(By.tagName("option")).size();
+	    int statesRandom=rand1.nextInt(1,statesIndex);
+	    selectElementState.click();
+	    stateSelect.selectByIndex(statesRandom);
 	    Thread.sleep(2000);
 	    checkLoginTextTest();
 	    Thread.sleep(2000);
-	    loginNameInput.sendKeys(email);
+	    loginNameInput.sendKeys(loginName);
 	    Thread.sleep(2000);
 	    passwordInput.sendKeys(password[passwordIndex]);
 	    Thread.sleep(2000);
