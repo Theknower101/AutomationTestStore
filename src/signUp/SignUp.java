@@ -31,7 +31,7 @@ public class SignUp extends TestData {
        //data
 	    int firstNameIndex=rand1.nextInt(firstName.length);
 	    int lastNameIndex=rand1.nextInt(lastName.length);
-	    int emailIndex=rand1.nextInt(9800);
+	    int emailIndex=rand1.nextInt(90800);
 	    int telephoneIndex=rand1.nextInt(telephone.length);
 	    int faxIndex=rand1.nextInt(fax.length);
 	    int passwordIndex=rand1.nextInt(password.length);
@@ -39,63 +39,63 @@ public class SignUp extends TestData {
 	    String passwordValue=password[passwordIndex];
 	    String confirmedPassword=password[passwordIndex];
 	    String email =firstName[firstNameIndex] +lastName[lastNameIndex]+emailIndex+"@gmail.com";
-	    String loginName=firstName[firstNameIndex] +lastName[lastNameIndex];
+	     String loginName=firstName[firstNameIndex] +lastName[lastNameIndex]+emailIndex;
+	    
 	    Select stateSelect=new Select(selectElementState);
 	    Select countrySelect=new Select(selectElementCountry);
 	    //Action
 	    firstNameInput.sendKeys(firstName[firstNameIndex]);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    lastNameInput.sendKeys(lastName[lastNameIndex]);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    emailInput.sendKeys(email);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    phoneInput.sendKeys(telephone[telephoneIndex]);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    faxInput.sendKeys(fax[faxIndex]);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    checkAddressTextTest();
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    companyInput.sendKeys(company);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    firstAddressInput.sendKeys(address1);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    secondAddressInput.sendKeys(address2);
-	    Thread.sleep(2000);
-	    cityInput.sendKeys(city);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    zipCodeInput.sendKeys(zipCode);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
+	    cityInput.sendKeys("Amman");
+	    Thread.sleep(1000);
 	    selectElementCountry.click();
 	    countrySelect.selectByIndex(countriesIndex);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    int statesIndex=selectElementState.findElements(By.tagName("option")).size();
 	    int statesRandom=rand1.nextInt(1,statesIndex);
 	    selectElementState.click();
 	    stateSelect.selectByIndex(statesRandom);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    checkLoginTextTest();
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    loginNameInput.sendKeys(loginName);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    passwordInput.sendKeys(password[passwordIndex]);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    confimedPasswordInput.sendKeys(confirmedPassword);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    checkNewSletterText();
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    yesRadio.click();
-	    Thread.sleep(2000);
 	    policyCheckBox.click();
 	    continueButton.click();
-	}
-	public void checkAddressTextTest() throws InterruptedException {
-		Thread.sleep(2000);
+	    Thread.sleep(2000);
+	   }
+	public void checkAddressTextTest()   {
 		WebElement addressText=driver.findElement(By.cssSelector("body > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > h4:nth-child(6)"));
 		boolean isDisplayed=addressText.isDisplayed();
 		Assert.assertEquals(isExist, isDisplayed);
 	}
-	public void checkLoginTextTest() throws InterruptedException {
-		Thread.sleep(2000);
+	public void checkLoginTextTest() {
+
 		//Element
 		WebElement loginText=driver.findElement(By.xpath("//h4[normalize-space()='Login Details']"));
 		//Data
@@ -104,8 +104,7 @@ public class SignUp extends TestData {
 		//Action
 		Assert.assertEquals(isExist, isDisplayed);
 	}
-	public void checkNewSletterText() throws InterruptedException {
-		Thread.sleep(2000);
+	public void checkNewSletterText() {
 		//Element
 		WebElement newSletterText=driver.findElement(By.xpath("//h4[normalize-space()='Newsletter']"));
 		//Data
@@ -114,5 +113,16 @@ public class SignUp extends TestData {
 		//Action
 		Assert.assertEquals(isExist, isDisplayed);
 	}
-
+	
+	public void checkTheAcountCreated() {
+		//Element
+		WebElement createdText=driver.findElement(By.xpath("//span[@class='maintext']"));
+		WebElement continueButton2=driver.findElement(By.cssSelector("a[title='Continue']"));
+		//Data
+		boolean theExpectedSignUp=true;
+		boolean theActualSignUp=driver.getPageSource().contains(confirmationMessage);
+		//Action
+		Assert.assertEquals(theActualSignUp, theExpectedSignUp);
+		   continueButton2.click();
+	}
 }

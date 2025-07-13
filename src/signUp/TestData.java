@@ -1,4 +1,5 @@
 package signUp;
+import java.time.Duration;
 import java.util.Random;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -6,8 +7,15 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 public class TestData {
 	protected static WebDriver driver;
+	String logInText="My Account";
+	String logOffText="Account Logout";
+	String confirmationMessage = " Your Account Has Been Created!";
+	protected String loginName;
+	protected String passwordValue;
 	boolean isExist=true;
 	Random rand1=new Random();
+	String logInUrl="https://automationteststore.com/index.php?rt=account/login";
+	String logOutUrl="https://automationteststore.com/index.php?rt=account/logout";
 	String url="https://automationteststore.com/index.php?rt=account/create";
 	String urlLoginPage="https://automationteststore.com/index.php?rt=account/login";
 	String signUpWindowName="I am a new customer.";
@@ -26,6 +34,7 @@ public class TestData {
 		if(driver==null) {
 			driver=new EdgeDriver();
 			driver.manage().window().maximize();
+			
 		}
 		
 	}
@@ -38,5 +47,6 @@ public class TestData {
 	}
 	public void configuration () {
 		driver.get(url);
+		
 	}
 }

@@ -6,9 +6,9 @@
       <class name="signUp.MyTestCases">
         <methods>
           <include name="setUp"/>
+          <include name="checkTheAccountRegistered"/>
           <include name="tearDown"/>
           <include name="mySetUp"/>
-          <include name="SignUp"/>
         </methods>
       </class> <!-- signUp.MyTestCases -->
     </classes>
