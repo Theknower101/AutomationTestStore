@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-13T19:11:49 EET" name="Default suite" finished-at="2025-07-13T19:12:31 EET" duration-ms="41510">
+  <suite started-at="2025-07-15T15:53:29 EET" name="Default suite" finished-at="2025-07-15T15:54:28 EET" duration-ms="59446">
     <groups>
     </groups>
-    <test started-at="2025-07-13T19:11:49 EET" name="Default test" finished-at="2025-07-13T19:12:31 EET" duration-ms="41510">
+    <test started-at="2025-07-15T15:53:29 EET" name="Default test" finished-at="2025-07-15T15:54:28 EET" duration-ms="59446">
       <class name="signUp.MyTestCases">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:11:47 EET" name="setUp" finished-at="2025-07-13T19:11:49 EET" duration-ms="1858" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:53:26 EET" name="setUp" finished-at="2025-07-15T15:53:29 EET" duration-ms="2954" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="mySetUp()[pri:0, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:11:49 EET" name="mySetUp" finished-at="2025-07-13T19:11:50 EET" duration-ms="1216" status="PASS">
+        <test-method is-config="true" signature="mySetUp()[pri:0, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:53:29 EET" name="mySetUp" finished-at="2025-07-15T15:53:31 EET" duration-ms="2075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetUp -->
-        <test-method signature="navigateToSignPage()[pri:1, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:11:50 EET" name="navigateToSignPage" finished-at="2025-07-13T19:11:53 EET" duration-ms="2646" status="PASS">
+        <test-method signature="navigateToSignPage()[pri:1, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:53:31 EET" name="navigateToSignPage" finished-at="2025-07-15T15:53:34 EET" duration-ms="3482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToSignPage -->
-        <test-method signature="checkTheSignUpWindow()[pri:2, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:11:53 EET" name="checkTheSignUpWindow" finished-at="2025-07-13T19:11:55 EET" duration-ms="2057" status="PASS">
+        <test-method signature="checkTheSignUpWindow()[pri:2, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:53:34 EET" name="checkTheSignUpWindow" finished-at="2025-07-15T15:53:36 EET" duration-ms="2059" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTheSignUpWindow -->
-        <test-method signature="SignUp()[pri:3, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:11:55 EET" name="SignUp" finished-at="2025-07-13T19:12:25 EET" duration-ms="30099" status="PASS">
+        <test-method signature="SignUp()[pri:3, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:53:36 EET" name="SignUp" finished-at="2025-07-15T15:54:07 EET" duration-ms="30576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp -->
-        <test-method signature="checkTheAccountRegistered()[pri:4, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:12:25 EET" name="checkTheAccountRegistered" finished-at="2025-07-13T19:12:26 EET" duration-ms="937" status="PASS">
+        <test-method signature="checkTheAccountRegistered()[pri:4, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:54:07 EET" name="checkTheAccountRegistered" finished-at="2025-07-15T15:54:09 EET" duration-ms="1686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTheAccountRegistered -->
-        <test-method signature="logOut()[pri:5, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:12:26 EET" name="logOut" finished-at="2025-07-13T19:12:31 EET" duration-ms="4503" status="PASS">
+        <test-method signature="addItemsToCart()[pri:5, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:54:09 EET" name="addItemsToCart" finished-at="2025-07-15T15:54:23 EET" duration-ms="14489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemsToCart -->
+        <test-method signature="logOut()[pri:5, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:54:23 EET" name="logOut" finished-at="2025-07-15T15:54:28 EET" duration-ms="5029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:signUp.MyTestCases@74e52303]" started-at="2025-07-13T19:12:31 EET" name="tearDown" finished-at="2025-07-13T19:12:31 EET" duration-ms="288" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:signUp.MyTestCases@7c729a55]" started-at="2025-07-15T15:54:28 EET" name="tearDown" finished-at="2025-07-15T15:54:29 EET" duration-ms="335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -7,13 +7,22 @@ import org.testng.Assert;
 public class LogOff extends TestData {
 
 	public void logOutTest() throws InterruptedException {
-		WebElement logOffButton=driver.findElement(By.linkText("Logoff"));
-		logOffButton.click();
+		driver.get(logOutUrl);
 		Thread.sleep(2000);
-		boolean theExpected=true;
-		boolean actual=driver.getPageSource().contains(logOffText);
-		Assert.assertEquals(actual, theExpected);
+		verifyLogOutpage();
+		clickOnContinueButton();
+	}
+	public void clickOnContinueButton() {
+		//Element
 		WebElement continueButton=driver.findElement(By.cssSelector("a[title='Continue']"));
+		//Action
 		continueButton.click();
+	}
+	public void verifyLogOutpage() {
+		//Data
+		boolean theExpectedLogOutText=true;
+		boolean actual=driver.getPageSource().contains(logOffText);
+		//Action
+		Assert.assertEquals(actual, theExpectedLogOutText);
 	}
 }
